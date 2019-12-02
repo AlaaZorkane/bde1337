@@ -1,0 +1,17 @@
+{
+  "name": "bde1337",
+  "version": "1.0.0",
+  "description": "bde1337",
+  "author": "Alaa Zorkane",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
