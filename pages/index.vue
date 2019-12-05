@@ -74,7 +74,7 @@ export default {
             },
             {
               name: "Ayman Biri",
-              aka: "biri",
+              aka: "rasbiri",
               position: "president",
               srs: "biri"
             },
@@ -110,13 +110,13 @@ export default {
           members: [
             {
               name: "Hafsa Essabrari",
-              aka: "7fsa",
+              aka: "7fsa, bimo, chniwla",
               position: "external",
               srs: "hafsa"
             },
             {
               name: "Aicha Laafia",
-              aka: "l3afia",
+              aka: "fofo",
               position: "vice-external",
               srs: "aicha"
             }
