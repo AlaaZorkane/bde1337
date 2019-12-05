@@ -11,7 +11,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vuetify": "^2.1.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@mdi/font": "^4.6.95"
+  }
 }
