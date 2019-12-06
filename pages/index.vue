@@ -3,7 +3,13 @@
     <v-col>
       <v-row class="pl-5 pb-5" align="center" justify="center">
         <v-avatar color="#fafafa" size="200">
-          <v-img :src="require('~/assets/images/logo.svg')" alt="logo"></v-img>
+          <v-img :src="require('~/assets/images/logo.svg')" alt="logo">
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular size="100" indeterminate color="primary darken-1"></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
         </v-avatar>
       </v-row>
       <v-row align="center" justify="center">
