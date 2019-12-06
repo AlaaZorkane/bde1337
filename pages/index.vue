@@ -7,7 +7,7 @@
         </v-avatar>
       </v-row>
       <v-row align="center" justify="center">
-        <h1 class="pl-5 display-2 font-weight-thin text-center black--text">The Congress you need</h1>
+        <h1 class="pl-5 display-1 font-weight-thin text-center black--text">The Congress you need</h1>
       </v-row>
     </v-col>
     <v-img
@@ -18,16 +18,23 @@
       position="absolute"
     >
       <v-col>
-        <v-row v-for="(depart, i) in departs" :key="i" align="center" justify="start" class="py-0">
-          <v-col v-for="(member, j) in depart.members" :key="j" class="text-center">
+        <v-row v-for="(depart, i) in departs" :key="i" align="center" justify="center" class="py-0">
+          <v-col
+            v-for="(member, j) in depart.members"
+            :key="j"
+            class="text-center"
+            :lg="depart.title === 'Main' ? '4' : '6'"
+            xs="10"
+          >
             <v-card class="mx-5 my-0" shaped elevation="3" color="rgb(255, 255, 255, 0.15)">
-              <v-row>
+              <v-row align="center" justify="center">
                 <v-col cols="8">
                   <v-icon color="white" class="py-3">mdi-{{depart.icon}}</v-icon>
                   <v-card-title primary-title class="justify-center pt-1">
                     <div>
                       <h3
-                        class="headline white--text font-weight-bold text-uppercase"
+                        class="white--text font-weight-bold text-uppercase member-name cursor"
+                        @click="gotoIntra(member.intra)"
                       >{{member.name}}</h3>
                       <p class="white--text overline">( aka {{member.aka}} )</p>
                       <div
@@ -36,8 +43,8 @@
                     </div>
                   </v-card-title>
                 </v-col>
-                <v-col class="py-0">
-                  <v-avatar class="py-0 px-0" size="150" tile>
+                <v-col>
+                  <v-avatar class="px-0 pb-2 cursor" size="150" tile @click="gotoIntra(member.intra)">
                     <v-hover v-slot:default="{ hover }">
                       <v-img
                         v-if="member.srs"
@@ -70,17 +77,20 @@ export default {
               name: "Oussama Zaazaa",
               position: "vice-president",
               aka: "Ozaazaa",
+              intra: "msanabi",
               srs: "ozaazaa"
             },
             {
               name: "Ayman Biri",
               aka: "rasbiri",
+              intra: "abiri",
               position: "president",
               srs: "biri"
             },
             {
               name: "Mariam Fanna",
               aka: "Mariam",
+              intra: "fmariam",
               position: "vice-president",
               srs: "mariam"
             }
@@ -93,12 +103,14 @@ export default {
             {
               name: "Mohamed Ouyizme",
               aka: "toxiic",
+              intra: "mouyizme",
               position: "internal",
               srs: "toxic"
             },
             {
               name: "Alaa Zorkane",
               aka: "droven",
+              intra: "azorkane",
               position: "vice-internal",
               srs: "alaa"
             }
@@ -111,12 +123,14 @@ export default {
             {
               name: "Hafsa Essabrari",
               aka: "7fsa, bimo, chniwla",
+              intra: "hessabra",
               position: "external",
               srs: "hafsa"
             },
             {
               name: "Aicha Laafia",
               aka: "fofo",
+              intra: "alaafia",
               position: "vice-external",
               srs: "aicha"
             }
@@ -129,12 +143,14 @@ export default {
             {
               name: "Souad Lyazid",
               aka: "so3ada",
+              intra: "slyazid",
               position: "secretary",
               srs: "souad"
             },
             {
               name: "Abdesslame Abouibrahim",
               aka: "abida",
+              intra: "aabouibr",
               position: "vice-secretary",
               srs: "abida"
             }
@@ -147,12 +163,14 @@ export default {
             {
               name: "Hamza Kchikech",
               aka: "kchkch lkbir",
+              intra: "hkchikec",
               position: "Tresory",
               srs: "kchikech"
             },
             {
               name: "Hasnaa Elalam",
               aka: "7sna",
+              intra: "helalam",
               position: "vice-tresory",
               srs: "hasna"
             }
@@ -164,13 +182,15 @@ export default {
           members: [
             {
               name: "Yahya Ez Zainabi",
-              aka: "32 points",
+              aka: "30 points",
+              intra: "yez-zain",
               position: "Counsler",
               srs: "yahya"
             },
             {
               name: "Anas Massnaoui",
               aka: "Anas",
+              intra: "amassnao",
               position: "Counsler",
               srs: "anas"
             }
@@ -178,15 +198,26 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    gotoIntra: function(name) {
+      window.open(`https://profile.intra.42.fr/users/${name}`, "_blank");
+    }
   }
 };
 </script>
 
 <style>
+.member-name {
+  font-size: calc(10px + 0.5vh) !important;
+}
 .container {
   padding: 0;
 }
 .carousel {
   height: 100vh;
+}
+.cursor {
+	cursor: pointer;
 }
 </style>
