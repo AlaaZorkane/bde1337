@@ -44,14 +44,25 @@
                   </v-card-title>
                 </v-col>
                 <v-col>
-                  <v-avatar class="px-0 pb-2 cursor" size="150" tile @click="gotoIntra(member.intra)">
+                  <v-avatar
+                    class="px-0 pb-2 cursor"
+                    size="150"
+                    tile
+                    @click="gotoIntra(member.intra)"
+                  >
                     <v-hover v-slot:default="{ hover }">
                       <v-img
                         v-if="member.srs"
                         height="130%"
                         width="150%"
                         :src="require(`~/assets/images/avatars/`+ (hover ? `fun/${member.srs}_fun.png` : `srs/${member.srs}.png`))"
-                      ></v-img>
+                      >
+                        <template v-slot:placeholder>
+                          <v-row class="fill-height ma-0" align="center" justify="center">
+                            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                          </v-row>
+                        </template>
+                      </v-img>
                     </v-hover>
                   </v-avatar>
                 </v-col>
@@ -218,6 +229,6 @@ export default {
   height: 100vh;
 }
 .cursor {
-	cursor: pointer;
+  cursor: pointer;
 }
 </style>
