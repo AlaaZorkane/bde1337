@@ -18,9 +18,9 @@
     </v-col>
     <v-img
       src="https://i.ibb.co/b1vDRqB/bg.png"
-      aspect-ratio="2.1"
-      class="grey lighten-2 mx-5 my-5"
-      max-height
+      aspect-ratio="1.4"
+	  max-height
+      class="grey lighten-2"
       position="absolute"
     >
       <v-col>
