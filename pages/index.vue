@@ -13,13 +13,16 @@
         </v-avatar>
       </v-row>
       <v-row align="center" justify="center">
-        <h1 class="pl-5 display-1 font-weight-thin text-center black--text">The Congress you need</h1>
+        <h1 class="pl-5 display-1 font-weight-thin text-center black--text">
+          The Congress
+          <span @click="gotoIntra('me')" class="cursor primary--text font-weight-bold">YOU</span> need
+        </h1>
       </v-row>
     </v-col>
     <v-img
       src="https://i.ibb.co/b1vDRqB/bg.png"
       aspect-ratio="1.4"
-	  max-height
+      max-height
       class="grey lighten-2"
       position="absolute"
     >
@@ -218,7 +221,8 @@ export default {
   },
   methods: {
     gotoIntra: function(name) {
-      window.open(`https://profile.intra.42.fr/users/${name}`, "_blank");
+      if (name == "me") window.open("https://profile.intra.42.fr/", "_blank");
+      else window.open(`https://profile.intra.42.fr/users/${name}`, "_blank");
     }
   }
 };
@@ -236,5 +240,8 @@ export default {
 }
 .cursor {
   cursor: pointer;
+}
+.cursor:hover {
+	text-decoration: underline;
 }
 </style>
