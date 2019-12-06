@@ -93,7 +93,7 @@ export default {
             {
               name: "Oussama Zaazaa",
               position: "vice-president",
-              aka: "Ozaazaa",
+              aka: "Varys",
               intra: "msanabi",
               srs: "ozaazaa"
             },
