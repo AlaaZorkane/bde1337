@@ -201,14 +201,14 @@ export default {
               name: "Yahya Ez Zainabi",
               aka: "30 points",
               intra: "yez-zain",
-              position: "Counsler",
+              position: "Counselor",
               srs: "yahya"
             },
             {
               name: "Anas Massnaoui",
               aka: "Anas",
               intra: "amassnao",
-              position: "Counsler",
+              position: "Counselor",
               srs: "anas"
             }
           ]
