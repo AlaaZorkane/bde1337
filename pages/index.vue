@@ -101,7 +101,7 @@ export default {
               srs: "ozaazaa"
             },
             {
-              name: "Ayman Biri",
+              name: "Aymane Biri",
               aka: "rasbiri",
               intra: "abiri",
               position: "president",
@@ -209,7 +209,7 @@ export default {
             },
             {
               name: "Anas Massnaoui",
-              aka: "Anas",
+              aka: "Natas",
               intra: "amassnao",
               position: "Counselor",
               srs: "anas"
